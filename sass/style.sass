@@ -2,14 +2,94 @@
 
     body
         font-family: serif
-        
+
+    img
+        min-width: 100%
+
     .container 
         min-width: 1170px
         width: 96%
         margin: auto
 
+    .button
+        background-color: $buttons
+        color: $accent
+        border: none
+
+
     .header
+        padding: 20px 0
         &-block
             display: flex
             justify-content: space-between
             align-items: center
+        &__info
+            display: flex
+            text-align: right
+        &__contacts
+            display: flex
+            flex-direction: column
+            justify-content: center
+            @media ( max-width: 640px )
+                display: none
+                
+        &__address
+            color: $accent
+            font-size: 13px
+            font-weight: 400
+        &phone
+            font-size: 20px
+            font-weight: 400
+            color: $accent
+            text-decoration: none
+            display: block
+            margin-top: 5px
+        &__button
+            padding: 18px 47px
+            border-radius: 10px
+            margin-left:  30px
+            font-size: 13px
+
+
+
+.main
+    background-color: $grey
+    &-block
+        display: flex
+        align-items: center
+        padding: 40px 0 15px 0
+    &-text
+       flex-basis: 50% 
+       &__title
+            font-size: 41px
+            color: $accent
+            padding-right: 200px
+            line-height: 55px
+            margin: 45px 0
+        &subtitle
+            font-size: 20px
+            line-height: 65px
+            color: $accent
+    &-image
+        margin-bottom: -55px
+    &-list
+        margin: 0
+        padding: 0
+        &__item
+            display: flex
+            align-items: center
+        &__image
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ffd200
+            border-radius: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 30px
+            margin-bottom: 30px
+        
+        &__text
+            line-height: 24px
+            font-style: 14px
+            color: $accent

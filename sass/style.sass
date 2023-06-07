@@ -1,4 +1,8 @@
 @import "vars"
+@import "fonts"
+
+    *
+        box-sizing: border-box
 
     body
         font-family: serif
@@ -10,12 +14,25 @@
         min-width: 1170px
         width: 96%
         margin: auto
+        @media ( max-width: 640px )
+            width: 90%
 
     .button
         background-color: $buttons
         color: $accent
         border: none
+        +bold
+        cursor: pointer
+        padding: 18px 47px
+        border-radius: 10px
+        &:hover
+            background-color: lighten($buttons, 15%)
 
+    .input
+        border: 1px solid $border-input
+        font-size: 15px
+        border-radius: 10px
+        padding: 25px
 
     .header
         padding: 20px 0
@@ -37,7 +54,7 @@
             color: $accent
             font-size: 13px
             font-weight: 400
-        &phone
+        &__phone
             font-size: 20px
             font-weight: 400
             color: $accent
@@ -58,38 +75,118 @@
         display: flex
         align-items: center
         padding: 40px 0 15px 0
+        @media ( max-width: 1200px )
+            flex-direction: column
     &-text
        flex-basis: 50% 
+       @media ( max-width: 1200px )
+            margin-bottom: 30px
        &__title
             font-size: 41px
             color: $accent
             padding-right: 200px
             line-height: 55px
-            margin: 45px 0
+            margin: 45px 0 20px 0
+            @media ( max-width: 1200px )
+                padding-bottom: 10px
+            @media ( max-width: 768px )
+                font-size: 30px
+                line-height: 1.4
         &subtitle
             font-size: 20px
             line-height: 65px
             color: $accent
+            @media ( max-width: 640px )
+                font-size: 16px
+                line-height: 1.4
     &-image
         margin-bottom: -55px
+        @media ( max-width: 1200px )
+            width: 100%
     &-list
-        margin: 0
-        padding: 0
+        margin: 40px 0 0 0
+        padding: 0 0 0 0
+        @media ( max-width: 640px )
+            margin: 20px 0 0 0
         &__item
             display: flex
             align-items: center
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+            @media ( max-width: 640px )
+                margin-bottom: 15px
         &__image
-            width: 40px;
-            height: 40px;
+            width: 40px
+            height: 40px
             border: 2px solid #ffd200
             border-radius: 50px
             display: flex
             justify-content: center
             align-items: center
-            margin-right: 30px
-            margin-bottom: 30px
-        
+            margin-right: 20px
         &__text
             line-height: 24px
             font-style: 14px
             color: $accent
+            min-width: 300px
+            @media ( max-width: 640px )
+                font-size: 12px
+
+
+.offer
+    padding: 90px 0
+    background-image: url('../img/kitchenl.ivingroom.svg') no-repeat
+    background-position: center right
+    background-size: cover
+    position: relative
+    @media ( max-width: 1200px )
+    background-size: cover
+    @media ( max-width: 768px )
+        background: #fff
+    &:before
+        content: ''
+        width: 50%
+        height: 100%
+        position: absolute
+        background-color: #fff
+        top: 0
+        left: 0
+    &-block
+        width: 50px
+        padding-right: 90px
+        position: relative
+        @media ( max-width: 768px )
+            width: 100%
+            padding-right: 0
+    &-title
+        font-size: 24px
+        line-height: 35px
+        max-width: 340px
+        margin-bottom: 25px
+        +bold
+    &-subtitle
+        display: inline-block
+        max-width: 260px
+        font-size: 16px
+        margin-bottom: 30px
+    &__input
+        margin-bottom: 30px
+        width: 240px
+        @media ( max-width: 1200px )
+            width: 100%
+            margin-bottom: 15px
+        &:first-child
+            margin-right: 10px 
+    &__button
+        width: 100%
+        min-height: 70px
+        @media ( max-width: 1200px )
+            font-size: 13px 
+        @media ( max-width: 768px )
+            font-size: 16px
+
+
+        
+
+       
